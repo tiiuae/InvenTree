@@ -41,7 +41,7 @@ export function getActions(navigate: NavigateFunction) {
     },
     {
       id: 'about',
-      label: t`About InvenTree`,
+      label: t`About`,
       description: t`About the InvenTree org`,
       onClick: () => aboutInvenTree(),
       leftSection: <IconLink size='1.2rem' />

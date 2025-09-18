@@ -41,26 +41,37 @@ export function Wrapper({
 }>) {
   const navigate = useNavigate();
 
-  return (
-    <Paper p='xl' withBorder miw={425} shadow='lg'>
-      <Stack gap={smallPadding ? 0 : 'md'}>
-        <StylishText size='xl'>{titleText}</StylishText>
-        <Divider p='xs' />
-        {loader && (
-          <Group justify='center'>
-            <Loader />
-          </Group>
-        )}
-        {children}
-        {logOff && (
-          <>
-            <Divider p='xs' />
-            <Button onClick={() => doLogout(navigate)} color='red'>
-              <Trans>Log off</Trans>
-            </Button>
-          </>
-        )}
-      </Stack>
-    </Paper>
-  );
+return (
+  <Paper
+    p="xl"
+    withBorder={false}
+    shadow="none"
+    // style={{
+    //   background: "rgba(255, 255, 255)",
+    //   borderColor: "rgba(255, 255, 255, 0)", // Optional: custom border color
+    //   borderWidth: "1px",  // Optional: custom border width
+    //   borderStyle: "solid" // Optional: custom border style
+    // }}
+    miw={425}
+  >
+    <Stack gap={smallPadding ? 0 : 'md'}>
+      <StylishText size="xl">{titleText}</StylishText>
+      <Divider p="xs" />
+      {loader && (
+        <Group justify="center">
+          <Loader />
+        </Group>
+      )}
+      {children}
+      {logOff && (
+        <>
+          <Divider p="xs" />
+          <Button onClick={() => doLogout(navigate)} color="red">
+            <Trans>Log off</Trans>
+          </Button>
+        </>
+      )}
+    </Stack>
+  </Paper>
+);
 }

@@ -126,7 +126,8 @@ export default function Login() {
               </>
             )}
           </Wrapper>
-          <AuthFormOptions hostname={hostname} toggleHostEdit={setHostEdit} />
+          {/* <AuthFormOptions hostname={hostname} toggleHostEdit={setHostEdit} /> */} 
+          
         </>
       )}
     </>

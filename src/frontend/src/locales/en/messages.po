@@ -3741,8 +3741,8 @@ msgstr "Go to the Admin Center"
 #~ msgstr "Instance"
 
 #: src/defaults/links.tsx:83
-#~ msgid "InvenTree"
-#~ msgstr "InvenTree"
+#~ msgid "SCIF Inventory Management Tool"
+#~ msgstr "SCIF Inventory Management Tool"
 
 #: src/defaults/links.tsx:93
 msgid "API"

@@ -88,7 +88,7 @@ function DrawerContent({ closeFunc }: Readonly<{ closeFunc?: () => void }>) {
       },
       {
         id: 'build',
-        title: t`Manufacturing`,
+        title: t`SCIF Orders`,
         link: '/manufacturing/',
         hidden: !user.hasViewRole(UserRoles.build),
         icon: 'build'
@@ -106,19 +106,19 @@ function DrawerContent({ closeFunc }: Readonly<{ closeFunc?: () => void }>) {
         link: '/sales/',
         hidden: !user.hasViewRole(UserRoles.sales_order),
         icon: 'sales_orders'
-      },
-      {
-        id: 'users',
-        title: t`Users`,
-        link: '/core/index/users',
-        icon: 'user'
-      },
-      {
-        id: 'groups',
-        title: t`Groups`,
-        link: '/core/index/groups',
-        icon: 'group'
-      }
+      }// ,
+      // {
+      //   id: 'users',
+      //   title: t`Users`,
+      //   link: '/core/index/users',
+      //   icon: 'user'
+      // },
+      // {
+      //   id: 'groups',
+      //   title: t`Groups`,
+      //   link: '/core/index/groups',
+      //   icon: 'group'
+      // }
     ];
   }, [user]);
 
@@ -213,11 +213,11 @@ function DrawerContent({ closeFunc }: Readonly<{ closeFunc?: () => void }>) {
       </Container>
       <div ref={ref}>
         <Space h='md' />
-        <MenuLinks
+        {/* <MenuLinks
           title={t`Documentation`}
           links={menuItemsDocumentation}
           beforeClick={closeFunc}
-        />
+        /> */}
         <Space h='md' />
         <MenuLinks
           title={t`About`}

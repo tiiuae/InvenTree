@@ -183,7 +183,7 @@ export function AboutLinks(
   if (user.isSuperuser() || !settings.isSet('INVENTREE_RESTRICT_ABOUT')) {
     base_items.push({
       id: 'about',
-      title: t`About InvenTree`,
+      title: t`About`,
       description: t`About the InvenTree Project`,
       icon: 'info',
       action: aboutInvenTree
