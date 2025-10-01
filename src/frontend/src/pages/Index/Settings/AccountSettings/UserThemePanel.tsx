@@ -24,6 +24,8 @@ import { StylishText } from '../../../../components/items/StylishText';
 import { SizeMarks } from '../../../../defaults/defaults';
 import { IS_DEV } from '../../../../main';
 import { useLocalState } from '../../../../states/LocalState';
+import { useUserState } from '../../../../states/UserState';
+
 
 function getLkp(color: string) {
   return { [DEFAULT_THEME.colors[color][6]]: color };
@@ -39,6 +41,9 @@ export function UserTheme({ height }: Readonly<{ height: number }>) {
     useShallow((state) => [state.userTheme, state.setTheme, state.setLanguage])
   );
 
+  // Grab the isSuperuser boolean by calling the selector
+  const isSuperuser = useUserState((state) => state.isSuperuser());
+
   // radius
   function getMark(value: number) {
     const obj = SizeMarks.find((mark) => mark.value === value);
@@ -53,6 +58,11 @@ export function UserTheme({ height }: Readonly<{ height: number }>) {
   function changeRadius(value: number) {
     setRadius(value);
     setTheme([{ key: 'radius', value: value.toString() }]);
+  }
+
+    // Early return null if user is NOT superuser
+  if (!isSuperuser) {
+    return null;
   }
 
   return (

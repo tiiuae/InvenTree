@@ -20,9 +20,13 @@ export function ThemeContext({
 }: Readonly<{ children: JSX.Element }>) {
   const [userTheme] = useLocalState(useShallow((state) => [state.userTheme]));
 
+  // Log primaryColor before creating the theme
+  //console.log('userTheme.primaryColor:', userTheme.primaryColor);
+
   // Theme
   const myTheme = createTheme({
-    primaryColor: userTheme.primaryColor,
+    //primaryColor: userTheme.primaryColor,
+    primaryColor: 'violet',
     white: userTheme.whiteColor,
     black: userTheme.blackColor,
     defaultRadius: userTheme.radius,

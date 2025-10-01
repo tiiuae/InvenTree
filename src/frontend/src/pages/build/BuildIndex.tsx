@@ -99,7 +99,7 @@ export default function BuildIndex() {
 
   return (
     <Stack>
-      <PageDetail title={t`Manufacturing`} actions={[]} />
+      <PageDetail title={t`SCIF Orders`} actions={[]} />
       <PanelGroup
         pageKey='build-index'
         panels={panels}
