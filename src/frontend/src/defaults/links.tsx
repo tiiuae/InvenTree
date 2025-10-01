@@ -44,7 +44,7 @@ export function getNavTabs(user: UserStateProps): NavTab[] {
       role: UserRoles.stock
     },
     {
-      name: 'manufacturing',
+      name: 'SCIF Orders',
       title: t`SCIF Orders`,
       icon: <IconBuildingFactory2 />,
       role: UserRoles.build
