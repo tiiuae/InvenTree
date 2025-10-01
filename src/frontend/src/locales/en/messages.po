@@ -2511,7 +2511,7 @@ msgstr "Stock"
 #: src/defaults/links.tsx:48
 #: src/pages/build/BuildDetail.tsx:741
 #: src/pages/build/BuildIndex.tsx:102
-msgid "Manufacturing"
+msgid "SCIF Orders"
 msgstr "SCIF Orders"
 
 #: src/components/nav/NavigationDrawer.tsx:98
